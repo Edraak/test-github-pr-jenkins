@@ -18,27 +18,27 @@ pipeline {
           node('master') {
             checkout scm
             sh 'ls'
-            sh 'sleep 10'
+            sh 'sleep 50'
             echo 'Hi 1'
-            sh 'sleep 10'
+            sh 'sleep 50'
             echo 'Hi 2'
           }
         }, node2: {
           node('master') {
             checkout scm
             sh 'ls'
-            sh 'sleep 10'
+            sh 'sleep 50'
             echo 'Hi 1'
-            sh 'sleep 10'
+            sh 'sleep 50'
             echo 'Hi 2'
           }
         }, node3: {
           node('master') {
             checkout scm
             sh 'ls'
-            sh 'sleep 10'
+            sh 'sleep 50'
             echo 'Hi 1'
-            sh 'sleep 10'
+            sh 'sleep 50'
             echo 'Hi 2'
           }
         }, failFast: false
