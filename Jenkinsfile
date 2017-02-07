@@ -14,7 +14,7 @@ pipeline {
 
     stage('Test') {
       steps {
-        parallel
+        parallel [
           node1: node('master') {
             checkout scm
             sh 'ls'
@@ -23,7 +23,6 @@ pipeline {
             sh 'sleep 10'
             echo 'Hi 2'
           },
-
           node2: node('master') {
             checkout scm
             sh 'ls'
@@ -32,7 +31,6 @@ pipeline {
             sh 'sleep 10'
             echo 'Hi 2'
           },
-
           node3: node('master') {
             checkout scm
             sh 'ls'
@@ -41,6 +39,7 @@ pipeline {
             sh 'sleep 10'
             echo 'Hi 2'
           }
+        ]
       }
     }
 
