@@ -22,7 +22,7 @@ pipeline {
             echo 'Hi 1'
             sh 'sleep 10'
             echo 'Hi 2'
-          }
+          },
 
           node2: node('master') {
             checkout scm
@@ -31,7 +31,7 @@ pipeline {
             echo 'Hi 1'
             sh 'sleep 10'
             echo 'Hi 2'
-          }
+          },
 
           node3: node('master') {
             checkout scm
