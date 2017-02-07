@@ -1,8 +1,8 @@
 pipeline {
   stages {
     stage('Start') {
-      node('master') {
-        steps {
+      steps {
+        node('master') {
           checkout scm
           sh 'ls'
           echo 'Hi'
@@ -11,8 +11,8 @@ pipeline {
     }
 
     stage('Test') {
-      node('master') {
-        steps {
+      steps {
+        node('master') {
           checkout scm
           sh 'ls'
           sh 'sleep 10'
@@ -20,10 +20,8 @@ pipeline {
           sh 'sleep 10'
           echo 'Hi 2'
         }
-      }
 
-      node('master') {
-        steps {
+        node('master') {
           checkout scm
           sh 'ls'
           sh 'sleep 10'
@@ -31,10 +29,8 @@ pipeline {
           sh 'sleep 10'
           echo 'Hi 2'
         }
-      }
 
-      node('master') {
-        steps {
+        node('master') {
           checkout scm
           sh 'ls'
           sh 'sleep 10'
@@ -46,8 +42,8 @@ pipeline {
     }
 
     stage('End') {
-      node('master') {
-        steps {
+      steps {
+        node('master') {
           checkout scm
           echo 'Au revoir'
           sh 'ls'
