@@ -1,7 +1,10 @@
 pipeline {
   stages {
     stage('Start') {
-      echo 'Hi'
+      node('master') {
+        checkout scm
+        echo 'Hi'
+      }
     }
 
     stage('Test') {
@@ -31,7 +34,10 @@ pipeline {
     }
 
     stage('Start') {
-      echo 'Au revoir'
+      node('master') {
+        checkout scm
+        echo 'Au revoir'
+      }
     }
   }
 }
