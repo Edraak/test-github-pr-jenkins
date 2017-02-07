@@ -33,7 +33,7 @@ pipeline {
       }
     }
 
-    stage('Start') {
+    stage('End') {
       node('master') {
         checkout scm
         echo 'Au revoir'
