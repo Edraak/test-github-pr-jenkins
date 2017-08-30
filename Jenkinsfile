@@ -1,5 +1,5 @@
 node('master') {
-    git 'https://github.com/Edraak/test-github-pr-jenkins.git'
+    checkout scm
     echo 'Hello World'
     sh 'ls *'
     sh 'cat *'
